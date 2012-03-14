@@ -111,4 +111,6 @@ for dir in $VIRTUALENV_DIRS; do
   cp -R $dir $CACHE_DIR/
 done
 
-source $BIN_DIR/compilenodejs $1 $2
+if [ -f $1/package.json ]; then
+  source $BIN_DIR/compilenodejs $1 $2
+fi
