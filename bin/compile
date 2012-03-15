@@ -114,3 +114,7 @@ done
 if [ -f $1/npm_requirements.txt ]; then
   source $BIN_DIR/compilenodejs $1 $2
 fi
+
+if [ -f "$BUILD_DIR/postdeploy" ]; then
+  $BUILD_DIR/postdeploy
+fi
