@@ -116,5 +116,5 @@ if [ -f $1/npm_requirements.txt ]; then
 fi
 
 if [ -f "$BUILD_DIR/postdeploy" ]; then
-  $BUILD_DIR/postdeploy
+  source $BUILD_DIR/postdeploy
 fi
