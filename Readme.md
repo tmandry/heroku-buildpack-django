@@ -67,3 +67,11 @@ Hacking
 To use this buildpack, fork it on Github.  Push up changes to your fork, then create a test app with `--buildpack <your-github-url>` and push to it.
 
 To change the vendored virtualenv, unpack the desired version to the `src/` folder, and update the virtualenv() function in `bin/compile` to prepend the virtualenv module directory to the path. The virtualenv release vendors its own versions of pip and setuptools.
+
+Changing Buildpacks
+-------------------
+
+If you've already deployed an app to heroku and you'd like to switch to this buildpack from the standard python buildpack, just run the following command with the heroku command line app:
+
+    heroku config:add BUILDPACK_URL=git://github.com/jiaaro/heroku-buildpack-django.git
+    
