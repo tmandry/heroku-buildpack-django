@@ -17,6 +17,7 @@ if [ ! "$DISABLE_COLLECTSTATIC" ]; then
     set +e
 
     # Check if collectstatic is configured properly.
+    echo $MANAGE_FILE
     python $MANAGE_FILE collectstatic --dry-run --noinput && RUN_COLLECTSTATIC=true
 
     # Compile assets if collectstatic appears to be kosher.
