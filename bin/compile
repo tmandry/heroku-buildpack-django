@@ -9,7 +9,7 @@
 set -eo pipefail
 
 # Prepend proper path for virtualenv hackery. This will be deprecated soon.
-export PATH=:node_modules/.bin:/usr/local/bin:$PATH
+export PATH=:/usr/local/bin:$PATH
 
 # Paths.
 BIN_DIR=$(cd $(dirname $0); pwd) # absolute path

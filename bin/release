@@ -10,6 +10,7 @@ MANAGE_FILE=${MANAGE_FILE:2}
 cat <<EOF
 ---
 config_vars:
+  PATH: /app/bin:/app/.heroku/python/bin:/usr/local/bin:/usr/bin:/bin
 
 EOF
 
