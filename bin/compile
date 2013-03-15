@@ -167,7 +167,7 @@ puts-step "Installing dependencies using Pip ($PIP_VERSION)"
 echo "Checking for npm_requirements"
 if [ -f $BUILD_DIR/npm_requirements.txt ]; then
   echo "Using compilenodejs"
-  source $BIN_DIR/compilenodejs $1 $2
+  source $BIN_DIR/compilenodejs $BUILD_DIR $CACHE_DIR
 fi
 
 # Django collectstatic support.
