@@ -164,7 +164,8 @@ puts-step "Installing dependencies using Pip ($PIP_VERSION)"
 /app/.heroku/python/bin/pip install --use-mirrors -r requirements.txt --exists-action=w --src=./.heroku/src | cleanup | indent
 
 # Install npm dependencies.
-if [ -f $1/npm_requirements.txt ]; then
+echo "Checking for npm_requirements"
+if [ -f $BUILD_DIR/npm_requirements.txt ]; then
   echo "Using compilenodejs"
   source $BIN_DIR/compilenodejs $1 $2
 fi
